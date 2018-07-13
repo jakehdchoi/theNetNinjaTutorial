@@ -8,8 +8,9 @@ from django.conf import settings # importing from settings.py
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('articles/', include('articles.urls')), # when this url is requested, look up articles/urls.py
     path('about/', views.about), # '$' means this is the end, nothing after (find expression)
+    path('accounts/', include('accounts.urls')),
+    path('articles/', include('articles.urls')), # when this url is requested, look up articles/urls.py
     path('', views.homepage), # homepage
 ]
 
