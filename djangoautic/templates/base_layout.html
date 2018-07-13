@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Aticle</title>
+        <title>Djangonautic</title>
         <link rel="stylesheet" href="{% static 'styles.css' %}">
     </head>
     <body>
@@ -18,15 +18,17 @@
                             <button type="submit">Logout</button>
                         </form>
                     </li>
-                    <li><a href="{% url 'articles:create' %}" class="hightlight">New Article</a></li>
+                    <li><a href="{% url 'articles:create' %}" class="highlight">New Article</a></li>
                     {% else %}
                     <li><a href="{% url 'accounts:login' %}">Login</a></li>
                     <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
                     {% endif %}
                 </ul>
             </nav>
+        </header>
+        <div class="wrapper">
             {% block content %}
             {% endblock %}
-        </header>
+        </div>
     </body>
 </html>
